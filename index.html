@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arturo Fraile Beltran — Finance & Business Analytics</title>
+<meta name="description" content="Arturo Fraile Beltran — Double Major in Finance & Business Analytics at Azusa Pacific University. Financial analysis, data analytics, and project management. Madrid, Spain → Los Angeles, CA.">
+<meta name="author" content="Arturo Fraile Beltran">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arturo Fraile Beltran — Finance & Business Analytics">
+<meta property="og:description" content="Double Major in Finance & Business Analytics at Azusa Pacific University. Financial analysis, data analytics, and project management.">
+<meta property="og:image" content="assets/headshot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0f1c'/><text y='.9em' x='50%25' text-anchor='middle' font-size='58' font-family='Georgia,serif' font-weight='700' fill='%23e0b155'>A</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:            #070B14;
+  --bg-2:          #0B1220;
+  --surface:       #101A2E;
+  --surface-2:     #16233C;
+  --line:          rgba(255,255,255,.09);
+  --line-strong:   rgba(255,255,255,.16);
+
+  --text:          #EAF0FA;
+  --text-dim:      #A3B1C6;
+  --text-faint:    #6C7C94;
+
+  --accent:        #4EA8FF;
+  --accent-soft:   rgba(78,168,255,.12);
+  --gold:          #E0B155;
+  --gold-soft:     rgba(224,177,85,.12);
+
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --max: 1140px;
+  --r: 14px;
+  --shadow: 0 18px 50px -18px rgba(0,0,0,.75);
+}
+
+/* ============ BASE ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:84px; -webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:var(--sans); font-size:17px; line-height:1.7;
+  font-weight:400; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+body::before{
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+  background:
+    radial-gradient(900px 520px at 78% -8%, rgba(78,168,255,.10), transparent 60%),
+    radial-gradient(760px 480px at 6% 8%, rgba(224,177,85,.055), transparent 62%);
+}
+img{max-width:100%; display:block}
+a{color:inherit; text-decoration:none}
+h1,h2,h3,h4{margin:0; line-height:1.2; font-weight:600; letter-spacing:-.02em}
+p{margin:0 0 1.05em}
+p:last-child{margin-bottom:0}
+::selection{background:rgba(78,168,255,.3)}
+
+.wrap{max-width:var(--max); margin:0 auto; padding:0 26px; position:relative; z-index:1}
+
+/* ============ NAV ============ */
+.nav{
+  position:sticky; top:0; z-index:100;
+  backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  background:rgba(7,11,20,.72);
+  border-bottom:1px solid transparent; transition:border-color .3s, background .3s;
+}
+.nav.scrolled{border-bottom-color:var(--line); background:rgba(7,11,20,.9)}
+.nav-in{max-width:var(--max); margin:0 auto; padding:0 26px; height:66px; display:flex; align-items:center; justify-content:space-between; gap:20px}
+.brand{display:flex; align-items:center; gap:11px; font-weight:600; letter-spacing:-.01em; font-size:15.5px; flex-shrink:0}
+.brand .mark{
+  width:32px; height:32px; border-radius:9px; display:grid; place-items:center;
+  background:linear-gradient(140deg, var(--accent), #2563EB);
+  font-family:var(--serif); font-weight:700; font-size:17px; color:#04070E;
+  box-shadow:0 4px 14px rgba(78,168,255,.3);
+}
+.nav-links{display:flex; align-items:center; gap:4px}
+.nav-links a{padding:8px 12px; border-radius:8px; font-size:14.5px; color:var(--text-dim); transition:color .18s, background .18s; white-space:nowrap}
+.nav-links a:hover{color:var(--text); background:rgba(255,255,255,.05)}
+.nav-links a.cta{margin-left:8px; color:#04070E; background:var(--gold); font-weight:600; box-shadow:0 4px 16px rgba(224,177,85,.24)}
+.nav-links a.cta:hover{background:#eec172; transform:translateY(-1px)}
+.burger{display:none; background:none; border:1px solid var(--line-strong); color:var(--text); width:40px; height:38px; border-radius:9px; cursor:pointer; font-size:17px; align-items:center; justify-content:center}
+
+@media(max-width:900px){
+  .burger{display:flex}
+  .nav-links{
+    position:absolute; top:66px; left:0; right:0; flex-direction:column; align-items:stretch; gap:2px;
+    background:rgba(9,14,25,.985); backdrop-filter:blur(18px);
+    padding:0 20px; border-bottom:1px solid var(--line);
+    max-height:0; overflow:hidden; opacity:0; transition:max-height .32s ease, opacity .22s, padding .32s;
+  }
+  .nav-links.open{max-height:520px; opacity:1; padding-top:14px; padding-bottom:20px}
+  .nav-links a{padding:12px 14px; font-size:16px}
+  .nav-links a.cta{margin-left:0; margin-top:8px; text-align:center}
+}
+
+/* ============ REVEAL ============ */
+.rv{opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.22,.7,.3,1), transform .7s cubic-bezier(.22,.7,.3,1)}
+.rv.in{opacity:1; transform:none}
+@media(prefers-reduced-motion:reduce){ .rv{opacity:1; transform:none; transition:none} html{scroll-behavior:auto} }
+
+/* ============ HERO ============ */
+.hero{padding:104px 0 92px; position:relative}
+.hero-grid{display:grid; grid-template-columns:1.24fr .96fr; gap:64px; align-items:center}
+.hero h1{
+  font-family:var(--serif); font-size:clamp(2.9rem, 6.4vw, 4.5rem);
+  font-weight:600; line-height:1.02; letter-spacing:-.035em; margin-bottom:22px;
+}
+.hero h1 .l2{
+  display:block;
+  background:linear-gradient(96deg, var(--gold) 10%, #F5D9A0 55%, var(--gold) 92%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;
+}
+.hero .role{font-size:1.2rem; color:var(--text); font-weight:500; margin-bottom:28px; letter-spacing:-.01em; max-width:34ch}
+.meta-row{display:flex; flex-wrap:wrap; gap:9px; margin-bottom:36px}
+.chip{font-family:var(--mono); font-size:12.5px; color:var(--text-dim); border:1px solid var(--line); background:rgba(255,255,255,.035); padding:6px 12px; border-radius:8px}
+.btns{display:flex; flex-wrap:wrap; gap:12px}
+.btn{
+  display:inline-flex; align-items:center; gap:9px; padding:13px 24px; border-radius:11px;
+  font-size:15px; font-weight:600; letter-spacing:-.01em; cursor:pointer;
+  transition:transform .18s, box-shadow .18s, background .18s, border-color .18s, color .18s;
+  border:1px solid transparent;
+}
+.btn-p{background:var(--accent); color:#04070E; box-shadow:0 8px 26px -8px rgba(78,168,255,.6)}
+.btn-p:hover{background:#6FB9FF; transform:translateY(-2px); box-shadow:0 14px 32px -8px rgba(78,168,255,.7)}
+.btn-s{border-color:var(--line-strong); color:var(--text); background:rgba(255,255,255,.04)}
+.btn-s:hover{border-color:var(--gold); color:var(--gold); transform:translateY(-2px); background:var(--gold-soft)}
+
+.photo-wrap{position:relative; justify-self:center; width:100%; max-width:430px}
+.photo-wrap::after{content:''; position:absolute; inset:18px -18px -18px 18px; border-radius:20px; border:1px solid rgba(224,177,85,.42); z-index:0}
+/* padding-top ratio box — reliable in every browser, unlike aspect-ratio on a replaced element */
+.photo{position:relative; z-index:1; width:100%; padding-top:104%; border-radius:20px; overflow:hidden; border:1px solid var(--line-strong); box-shadow:var(--shadow); background:var(--surface)}
+.photo img{position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:center 20%}
+.photo::after{content:''; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg, rgba(78,168,255,.07) 0%, transparent 34%, rgba(7,11,20,.38) 100%)}
+
+/* generic ratio box used elsewhere */
+.ratio{position:relative; width:100%; overflow:hidden; border-radius:12px; border:1px solid var(--line); background:var(--surface)}
+.ratio img{position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover}
+.r-golf{padding-top:125%}
+.r-wide{padding-top:64%}
+
+@media(max-width:900px){
+  .hero{padding:52px 0 56px}
+  .hero-grid{grid-template-columns:1fr; gap:40px}
+  .photo-wrap{max-width:300px; order:-1; justify-self:start}
+  .photo-wrap::after{inset:12px -12px -12px 12px}
+}
+
+/* ============ STATS ============ */
+.stats{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:rgba(255,255,255,.018)}
+.stats-in{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line)}
+.stat{background:var(--bg); padding:30px 24px; text-align:center; transition:background .25s}
+.stat:hover{background:var(--bg-2)}
+.stat .n{font-family:var(--serif); font-size:2.15rem; font-weight:600; color:var(--gold); letter-spacing:-.03em; line-height:1}
+.stat .k{font-family:var(--mono); font-size:11px; letter-spacing:.11em; text-transform:uppercase; color:var(--text-faint); margin-top:11px}
+@media(max-width:760px){.stats-in{grid-template-columns:repeat(2,1fr)} .stat{padding:24px 14px} .stat .n{font-size:1.75rem}}
+
+/* ============ SECTION ============ */
+section{padding:92px 0; position:relative}
+.sec-head{margin-bottom:48px; max-width:62ch}
+.sec-num{font-family:var(--mono); font-size:12px; letter-spacing:.16em; color:var(--accent); text-transform:uppercase; display:block; margin-bottom:14px}
+.sec-head h2{font-family:var(--serif); font-size:clamp(2rem,4.2vw,2.75rem); font-weight:600; letter-spacing:-.03em; margin-bottom:16px}
+.sec-head p{color:var(--text-dim); font-size:1.02rem}
+.alt{background:linear-gradient(180deg, transparent, rgba(255,255,255,.022) 18%, rgba(255,255,255,.022) 82%, transparent)}
+@media(max-width:760px){section{padding:66px 0} .sec-head{margin-bottom:36px}}
+
+/* ============ CARD ============ */
+.card{
+  background:linear-gradient(160deg, var(--surface), var(--bg-2));
+  border:1px solid var(--line); border-radius:var(--r); padding:28px;
+  transition:transform .28s cubic-bezier(.22,.7,.3,1), border-color .28s, box-shadow .28s;
+  position:relative; overflow:hidden;
+}
+.card:hover{transform:translateY(-4px); border-color:var(--line-strong); box-shadow:var(--shadow)}
+
+/* ============ ABOUT ============ */
+.about-body{max-width:78ch}
+.about-body p{color:var(--text-dim); font-size:1.08rem}
+.about-body strong{color:var(--text); font-weight:600}
+.pullquote{
+  margin-top:30px; padding:22px 26px; border-left:3px solid var(--gold);
+  background:var(--gold-soft); border-radius:0 12px 12px 0;
+  font-family:var(--serif); font-size:1.12rem; color:var(--text); font-style:italic; line-height:1.55;
+}
+
+/* ============ PROJECTS ============ */
+.proj-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(330px,1fr)); gap:22px}
+.proj{display:flex; flex-direction:column}
+.proj::before{
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, var(--accent), var(--gold));
+  transform:scaleX(0); transform-origin:left; transition:transform .38s cubic-bezier(.22,.7,.3,1);
+}
+.proj:hover::before{transform:scaleX(1)}
+.proj-top{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px}
+.proj-icon{width:42px; height:42px; border-radius:11px; display:grid; place-items:center; background:var(--accent-soft); border:1px solid rgba(78,168,255,.26); font-size:20px; flex-shrink:0}
+.proj-date{font-family:var(--mono); font-size:11.5px; color:var(--text-faint); letter-spacing:.05em}
+.proj h3{font-size:1.12rem; margin-bottom:10px; letter-spacing:-.015em}
+.proj p{color:var(--text-dim); font-size:14.8px; flex-grow:1; margin-bottom:18px}
+.proj-tags{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px}
+.proj-tags span{font-family:var(--mono); font-size:11px; color:var(--text-faint); border:1px solid var(--line); padding:4px 9px; border-radius:6px}
+.proj-links{display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:auto}
+.proj-link{display:inline-flex; align-items:center; gap:7px; font-size:14px; font-weight:600; color:var(--gold); transition:gap .2s, color .2s}
+.proj-link:hover{gap:12px; color:#F0CE8E}
+.proj-link.alt2{color:var(--accent)}
+.proj-link.alt2:hover{color:#84C4FF}
+
+/* ============ CERTS ============ */
+.cert-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(232px,1fr)); gap:18px}
+.certc{
+  border:1px solid var(--line); border-radius:14px; overflow:hidden;
+  background:linear-gradient(160deg, var(--surface), var(--bg-2));
+  transition:transform .26s, border-color .26s, box-shadow .26s; display:flex; flex-direction:column;
+}
+.certc:hover{transform:translateY(-4px); border-color:rgba(224,177,85,.45); box-shadow:var(--shadow)}
+.certc .shot{
+  position:relative; padding-top:75%; background:#0E1728; overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+.certc .shot img{
+  position:absolute; top:7%; left:7%; width:86%; height:86%;
+  object-fit:contain; border-radius:6px;
+}
+.certc .shot.badge img{top:11%; left:11%; width:78%; height:78%}
+.certc .shot.none{position:relative; padding-top:75%; display:block}
+.certc .shot.none::before{
+  content:attr(data-icon); position:absolute; inset:0; display:grid; place-items:center;
+  font-family:var(--serif); font-size:2.4rem; color:var(--gold);
+}
+.certc .cb .verify{color:var(--text-faint); transition:color .2s}
+.certc:hover .cb .verify{color:var(--gold)}
+.certc .shot.none{
+  background:linear-gradient(150deg, rgba(224,177,85,.14), rgba(78,168,255,.08));
+  font-family:var(--serif); font-size:2.4rem; color:var(--gold);
+}
+.certc .body{padding:16px 18px 18px}
+.certc .cn{font-size:14.8px; font-weight:600; letter-spacing:-.01em; line-height:1.35}
+.certc .cb{font-family:var(--mono); font-size:11px; color:var(--text-faint); margin-top:6px; letter-spacing:.04em}
+
+/* ============ EDUCATION ============ */
+.edu-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+.edu h3{font-size:1.2rem; margin-bottom:5px}
+.edu .sub{color:var(--accent); font-size:14.5px; font-weight:500; margin-bottom:18px}
+.edu dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px; font-size:15px}
+.edu dt{font-family:var(--mono); font-size:11.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--text-faint); padding-top:3px}
+.edu dd{margin:0; color:var(--text-dim)}
+.hl{color:var(--gold); font-weight:600}
+.notes{display:flex; flex-direction:column; gap:11px; margin-top:22px; padding-top:22px; border-top:1px solid var(--line)}
+.note{display:flex; gap:11px; font-size:14.6px; color:var(--text-dim); align-items:flex-start}
+.note .hi{color:var(--gold); font-size:13px; line-height:1.7}
+@media(max-width:860px){.edu-grid{grid-template-columns:1fr}}
+
+/* honors gallery */
+.hon-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(196px,1fr)); gap:16px}
+.hon{
+  border:1px solid var(--line); border-radius:13px; overflow:hidden; background:var(--bg-2);
+  transition:transform .26s, border-color .26s, box-shadow .26s;
+}
+.hon:hover{transform:translateY(-4px); border-color:rgba(224,177,85,.45); box-shadow:var(--shadow)}
+.hon .shot{aspect-ratio:1/1; background:#0E1728; display:grid; place-items:center; padding:16px; border-bottom:1px solid var(--line)}
+.hon .shot img{width:100%; height:100%; object-fit:contain}
+.hon .shot.txt{
+  background:linear-gradient(150deg, rgba(224,177,85,.16), rgba(78,168,255,.07));
+  flex-direction:column; text-align:center; gap:6px;
+}
+.hon .shot.txt .big{font-family:var(--serif); font-size:1.5rem; color:var(--gold); font-weight:600; line-height:1.1}
+.hon .shot.txt .sm{font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-faint)}
+.hon .cap{padding:13px 15px; font-size:13.5px; font-weight:600; letter-spacing:-.01em}
+.hon .cap span{display:block; font-family:var(--mono); font-size:10.5px; font-weight:400; color:var(--text-faint); margin-top:5px; letter-spacing:.05em}
+
+/* ============ GOLF ============ */
+.golf-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:start}
+.golf-body p{color:var(--text-dim)}
+.golf-stats{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:26px}
+.gs{padding:18px; border:1px solid var(--line); border-radius:12px; background:rgba(255,255,255,.028)}
+.gs .n{font-family:var(--serif); font-size:1.5rem; color:var(--gold); font-weight:600; line-height:1}
+.gs .k{font-size:13px; color:var(--text-faint); margin-top:7px}
+@media(max-width:900px){
+  .golf-grid{grid-template-columns:1fr; gap:34px}
+}
+
+/* ============ BEYOND ============ */
+.beyond-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+.beyond-grid .wide{grid-column:1 / -1}
+.beyond h3{font-size:1.2rem; margin-bottom:6px; display:flex; align-items:center; gap:11px}
+.beyond .bi{font-size:1.05rem}
+.beyond .when{font-family:var(--mono); font-size:11.5px; color:var(--gold); letter-spacing:.05em; margin-bottom:15px}
+.beyond p{color:var(--text-dim); font-size:15.3px}
+.beyond.wide h3{margin-bottom:16px}
+.svc-img{margin-bottom:20px}
+@media(max-width:860px){.beyond-grid{grid-template-columns:1fr}}
+
+/* document thumbnails (UCM diploma + letter) */
+.doc-pair{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:22px; padding-top:22px; border-top:1px solid var(--line)}
+.doc{margin:0}
+.doc img{
+  width:100%; height:150px; object-fit:contain; background:#0E1728; padding:9px;
+  border:1px solid var(--line); border-radius:10px; cursor:zoom-in; transition:border-color .24s, transform .24s;
+}
+.doc img:hover{border-color:rgba(224,177,85,.5); transform:translateY(-2px)}
+.doc figcaption{font-family:var(--mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--text-faint); margin-top:8px; text-align:center}
+
+/* ============ CONTACT ============ */
+.contact{text-align:center; padding:100px 0}
+.contact h2{font-family:var(--serif); font-size:clamp(2.1rem,5vw,3.1rem); font-weight:600; letter-spacing:-.035em; margin-bottom:36px}
+.contact-links{display:flex; flex-wrap:wrap; gap:14px; justify-content:center}
+.clink{
+  display:inline-flex; align-items:center; gap:11px; padding:16px 26px; border-radius:12px;
+  border:1px solid var(--line); background:rgba(255,255,255,.032); font-size:15px; font-weight:500;
+  transition:transform .22s, border-color .22s, background .22s, color .22s;
+}
+.clink:hover{transform:translateY(-3px); border-color:var(--accent); background:var(--accent-soft); color:var(--accent)}
+.clink .ci{font-size:17px}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--line); padding:34px 0; background:rgba(0,0,0,.28)}
+.foot{display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; font-size:13.5px; color:var(--text-faint)}
+.foot a{color:var(--text-faint); transition:color .2s}
+.foot a:hover{color:var(--accent)}
+.foot-links{display:flex; gap:22px}
+
+/* ============ LIGHTBOX ============ */
+.lb{position:fixed; inset:0; z-index:200; background:rgba(4,7,14,.93); backdrop-filter:blur(8px); display:none; place-items:center; padding:34px; cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:min(1000px,92vw); max-height:88vh; object-fit:contain; border-radius:12px; border:1px solid var(--line-strong); box-shadow:0 30px 80px rgba(0,0,0,.7); background:#fff}
+.lb .x{position:absolute; top:22px; right:26px; font-size:30px; color:var(--text-dim); background:none; border:0; cursor:pointer; line-height:1}
+.lb .x:hover{color:#fff}
+
+/* ============ DOCUMENT PREVIEW MODAL ============ */
+.pv{
+  position:fixed; inset:0; z-index:210; background:rgba(4,7,14,.9);
+  backdrop-filter:blur(10px); display:none; padding:34px;
+}
+.pv.on{display:grid; place-items:center}
+.pv-panel{
+  width:min(1180px, 90vw); height:88vh; display:flex; flex-direction:column;
+  background:var(--bg-2); border:1px solid var(--line-strong); border-radius:16px;
+  overflow:hidden; box-shadow:0 34px 90px rgba(0,0,0,.75);
+}
+.pv-bar{
+  flex-shrink:0; display:flex; align-items:center; gap:16px; padding:14px 20px;
+  border-bottom:1px solid var(--line); background:rgba(255,255,255,.03);
+}
+.pv-title{flex:1; min-width:0; font-size:15px; font-weight:600; letter-spacing:-.01em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.pv-title small{display:block; font-family:var(--mono); font-size:10.5px; font-weight:400; color:var(--text-faint); letter-spacing:.06em; margin-top:3px; text-transform:uppercase}
+.pv-act{
+  display:inline-flex; align-items:center; gap:8px; padding:9px 16px; border-radius:9px; flex-shrink:0;
+  font-size:13.5px; font-weight:600; background:var(--gold); color:#04070E; transition:background .2s, transform .2s;
+}
+.pv-act:hover{background:#eec172; transform:translateY(-1px)}
+.pv-x{flex-shrink:0; width:36px; height:36px; border-radius:9px; border:1px solid var(--line-strong); background:rgba(255,255,255,.05); color:var(--text-dim); font-size:20px; cursor:pointer; line-height:1}
+.pv-x:hover{color:#fff; border-color:var(--line-strong); background:rgba(255,255,255,.12)}
+.pv-body{flex:1; min-height:0; position:relative; background:#1a1f2b}
+.pv-body iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.pv-sheet{position:absolute; inset:0; overflow:auto; display:none; background:var(--bg-2)}
+.pv-sheet.on{display:block}
+
+/* ---- spreadsheet viewer ---- */
+.xl-tabs{
+  position:sticky; top:0; z-index:2; display:flex; gap:4px; flex-wrap:wrap;
+  padding:12px 16px; background:rgba(11,18,32,.97); border-bottom:1px solid var(--line);
+  backdrop-filter:blur(8px);
+}
+.xl-tab{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.05em; padding:7px 13px;
+  border-radius:7px; border:1px solid var(--line); background:rgba(255,255,255,.04);
+  color:var(--text-dim); cursor:pointer; transition:.18s; white-space:nowrap;
+}
+.xl-tab:hover{color:var(--text); border-color:var(--line-strong)}
+.xl-tab.on{background:var(--gold); border-color:var(--gold); color:#04070E; font-weight:600}
+.xl-pane{display:none; padding:18px 16px 30px; overflow-x:auto}
+.xl-pane.on{display:block}
+table.xl{
+  border-collapse:collapse; table-layout:fixed; font-size:13px;
+  font-variant-numeric:tabular-nums;
+}
+table.xl td{
+  border:1px solid rgba(255,255,255,.07); padding:7px 11px; color:var(--text-dim);
+  vertical-align:top; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.5;
+}
+table.xl td.n{text-align:right; color:var(--text); font-family:var(--mono); font-size:12.5px}
+table.xl td.nw{white-space:nowrap; overflow-wrap:normal}
+table.xl td.b{color:var(--text); font-weight:600}
+table.xl tr:hover td{background:rgba(255,255,255,.032)}
+table.xl tr.xl-gap td{border:0; height:10px; padding:0; background:none}
+table.xl tr.xl-gap:hover td{background:none}
+table.xl tr.xl-h td{
+  color:var(--gold); font-weight:600; font-size:13.5px; letter-spacing:-.01em;
+  border-color:transparent; background:none; padding-top:15px;
+}
+table.xl tr.xl-h:hover td{background:none}
+/* full-width merged prose rows: span the table, but keep a readable measure */
+table.xl tr.xl-w td{border-color:transparent; background:none; padding:6px 11px 14px}
+table.xl tr.xl-w:hover td{background:none}
+.xl-prose{max-width:88ch; color:var(--text-dim); font-size:12.8px; line-height:1.65}
+.pv-fallback{
+  position:absolute; inset:0; display:none; place-items:center; text-align:center; padding:34px;
+  color:var(--text-dim); font-size:15px;
+}
+.pv-fallback.on{display:grid}
+@media(max-width:620px){
+  .pv{padding:14px}
+  .pv-panel{width:100%; height:92vh; border-radius:13px}
+  .pv-bar{flex-wrap:wrap; gap:10px; padding:12px 14px}
+  .pv-title{flex-basis:100%; order:-1}
+  .pv-act{font-size:12.5px; padding:8px 13px}
+}
+.preview-hint{
+  display:flex; align-items:center; gap:7px; font-family:var(--mono); font-size:10.5px;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--text-faint); margin-bottom:14px;
+}
+.proj-note{
+  font-size:13px; line-height:1.55; color:var(--text-dim); margin-bottom:18px;
+  padding:12px 14px; border-left:2px solid var(--gold); background:var(--gold-soft);
+  border-radius:0 8px 8px 0;
+}
+.proj-note strong{color:var(--gold); font-weight:600}
+.proj.clickable{cursor:pointer}
+.proj.clickable:hover .preview-hint{color:var(--accent)}
+
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#1E2C46; border-radius:6px; border:3px solid var(--bg)}
+::-webkit-scrollbar-thumb:hover{background:#2B3D5C}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#top" class="brand"><span class="mark">A</span> Arturo Fraile Beltran</a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#golf">Golf</a>
+      <a href="#beyond">Beyond Work</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/Arturo-Fraile-Beltran-Resume.pdf" class="cta" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="rv">
+        <h1>Arturo<br><span class="l2">Fraile Beltran</span></h1>
+        <p class="role">Double Major in Finance &amp; Business Analytics — Azusa Pacific University</p>
+        <div class="meta-row">
+          <span class="chip">📍 Los Angeles, CA</span>
+          <span class="chip">🇪🇸 From Madrid, Spain</span>
+          <span class="chip">🎓 Graduation May 2027</span>
+          <span class="chip">🗣 English / Spanish</span>
+        </div>
+        <div class="btns">
+          <a href="#projects" class="btn btn-p">View My Work →</a>
+          <a href="assets/Arturo-Fraile-Beltran-Resume.pdf" class="btn btn-s" target="_blank" rel="noopener">↓ Download Resume</a>
+          <a href="https://www.linkedin.com/in/arturo-fb/" class="btn btn-s" target="_blank" rel="noopener">in LinkedIn</a>
+        </div>
+      </div>
+      <div class="photo-wrap rv">
+        <div class="photo"><img src="assets/headshot.jpg" alt="Arturo Fraile Beltran" width="880" height="1100"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= STATS ================= -->
+<div class="stats">
+  <div class="wrap" style="padding:0">
+    <div class="stats-in">
+      <div class="stat rv"><div class="n" data-count="3.90" data-dec="2">3.90</div><div class="k">Cumulative GPA</div></div>
+      <div class="stat rv"><div class="n" data-count="1" data-suffix="st">1st</div><div class="k">Stock Pitch 2026</div></div>
+      <div class="stat rv"><div class="n" data-count="150" data-prefix="$" data-suffix="K">$150K</div><div class="k">Project Cost Savings</div></div>
+      <div class="stat rv"><div class="n" data-count="5" data-suffix="×">5×</div><div class="k">Dean's List</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">01 — About</span>
+      <h2>Who I am</h2>
+    </div>
+    <div class="about-body rv">
+      <p>
+        Finance &amp; Business Analytics student at Azusa Pacific University, and hands-on
+        experience in project management, equity research, and data analysis. Bilingual (EN/ES)
+        with an international background that shapes how I approach teams and global markets.
+        I was raised in <strong>Madrid, Spain</strong>, spent a high school year living in
+        <strong>Ireland</strong>, moved to <strong>Minnesota</strong> for my first two years of
+        college, and now established in <strong>Los Angeles</strong>.
+      </p>
+      <p>
+        Outside professional endeavours, I'm a competitive golfer and love to volunteer and help
+        communities.
+      </p>
+      <div class="pullquote">
+        "Each round is an opportunity to improve — not just technically, but personally."
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">02 — Projects</span>
+      <h2>Selected work</h2>
+    </div>
+    <div class="proj-grid">
+
+      <article class="card proj clickable rv" data-preview="assets/files/Stock-Pitch-2026-CELH.pdf" data-dl="assets/files/Stock-Pitch-2026-CELH.pptx" data-label="Stock Pitch 2026 — Celsius Holdings (CELH)" data-kind="13-slide deck · 1st place">
+        <div class="proj-top"><div class="proj-icon">🏆</div><span class="proj-date">04 / 2025 — 04 / 2026</span></div>
+        <h3>Stock Pitch Competition</h3>
+        <p>Full equity pitch delivered to APU's School of Business and Management and its Advisory Council: investment thesis, valuation, catalysts, and risk. Placed <strong>2nd in Spring 2025</strong> (JPMorgan Chase), then <strong>1st in Spring 2026</strong> (Celsius Holdings).</p>
+        <div class="proj-tags"><span>Equity Research</span><span>Valuation</span><span>Comparables</span></div>
+        <div class="preview-hint">👁 Click to preview both decks</div>
+        <div class="proj-links">
+          <a class="proj-link" href="#" data-open="assets/files/Stock-Pitch-2026-CELH.pdf" data-dl="assets/files/Stock-Pitch-2026-CELH.pptx" data-label="Stock Pitch 2026 — Celsius Holdings (CELH)" data-kind="13-slide deck · 1st place">CELH — 2026 (1st) →</a>
+          <a class="proj-link alt2" href="#" data-open="assets/files/Stock-Pitch-2025-JPMC.pdf" data-dl="assets/files/Stock-Pitch-2025-JPMC.pptx" data-label="Stock Pitch 2025 — JPMorgan Chase &amp; Co (JPM)" data-kind="19-slide deck · 2nd place">JPMC — 2025 (2nd) →</a>
+          <a class="proj-link alt2" href="#" data-open="template:sheet-valuation" data-dl="assets/files/Stock-Pitch-Valuation-Model.xlsx" data-label="Stock Pitch — Valuation &amp; Ratio Model" data-kind="Excel workbook · 3 sheets">Valuation model →</a>
+        </div>
+      </article>
+
+      <article class="card proj clickable rv" data-preview="template:sheet-financials" data-dl="assets/files/Financial-Statements-and-Ratios.xlsx" data-label="Financial Statement &amp; Ratio Model" data-kind="Excel workbook · 3 sheets">
+        <div class="proj-top"><div class="proj-icon">📑</div><span class="proj-date">03 / 2025</span></div>
+        <h3>Financial Statement &amp; Ratio Model</h3>
+        <p>Built a linked Income Statement and Balance Sheet with a full financial ratio analysis layer — liquidity, leverage, profitability, and efficiency metrics.</p>
+        <div class="proj-tags"><span>Excel</span><span>Financial Modeling</span><span>Ratio Analysis</span></div>
+        <div class="preview-hint">👁 Click to preview</div>
+        <div class="proj-links">
+          <a class="proj-link" href="assets/files/Financial-Statements-and-Ratios.xlsx" download>↓ Download (XLSX)</a>
+        </div>
+      </article>
+
+      <article class="card proj clickable rv" data-preview="assets/files/SP500-Sector-Analysis.pdf" data-dl="assets/files/SP500-Sector-Analysis.pptx" data-label="S&amp;P 500 Sector Correlation Analysis" data-kind="11-slide deck">
+        <div class="proj-top"><div class="proj-icon">🧮</div><span class="proj-date">12 / 2025</span></div>
+        <h3>S&amp;P 500 Sector Correlation Analysis</h3>
+        <p>Team analysis examining how the performance trends of the 11 GICS sectors correlate with the overall S&amp;P 500 index. Completed for Foundations of Business Analytics.</p>
+        <div class="proj-tags"><span>Data Analysis</span><span>Excel</span><span>Correlation</span></div>
+        <div class="preview-hint">👁 Click to preview</div>
+        <div class="proj-links">
+          <a class="proj-link" href="assets/files/SP500-Sector-Analysis.pptx" download>↓ Download (PPTX)</a>
+          <a class="proj-link alt2" href="https://drive.google.com/uc?export=download&amp;id=1jyiMS11UqCI0X-XbvfTKUMfOBa2T8Yp5" target="_blank" rel="noopener">Dataset →</a>
+        </div>
+      </article>
+
+      <article class="card proj clickable rv" data-preview="assets/files/Globalization-Study-Streetwear-Spain-to-USA.pdf" data-dl="assets/files/Globalization-Study-Streetwear-Spain-to-USA.pdf" data-label="Globalization Study — Streetwear, Spain → USA" data-kind="Research paper · PDF">
+        <div class="proj-top"><div class="proj-icon">🌍</div><span class="proj-date">04 / 2025</span></div>
+        <h3>Globalization Study — Streetwear, Spain → USA</h3>
+        <p>Research paper analyzing the market-entry strategy for a Spanish streetwear brand expanding into the United States: market sizing, positioning, channel strategy, and regulatory considerations.</p>
+        <div class="proj-tags"><span>Market Entry</span><span>Research</span><span>Strategy</span></div>
+        <div class="preview-hint">👁 Click to preview</div>
+        <div class="proj-links">
+          <a class="proj-link" href="assets/files/Globalization-Study-Streetwear-Spain-to-USA.pdf" download>↓ Download (PDF)</a>
+        </div>
+      </article>
+
+      <article class="card proj rv">
+        <div class="proj-top"><div class="proj-icon">📊</div><span class="proj-date">09 / 2025</span></div>
+        <h3>Excel Macroeconomic Dashboard</h3>
+        <p>An interactive Excel dashboard pulling recent macroeconomic series from the Federal Reserve (FRED) — visualizing rates, inflation, employment, and growth indicators in one view.</p>
+        <div class="proj-tags"><span>Excel</span><span>FRED Data</span><span>Macro</span></div>
+        <div class="proj-note">
+          <strong>Note:</strong> this dashboard pulls live data. For it to display correctly, download
+          the file and open it in Microsoft Excel, then go to <strong>Data → Refresh All</strong>.
+        </div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://drive.google.com/drive/folders/1CiNjkhxWODv9KWhEWkBgF_rxSwGPy18x" target="_blank" rel="noopener">Open files →</a>
+        </div>
+      </article>
+
+      <article class="card proj rv">
+        <div class="proj-top"><div class="proj-icon">📈</div><span class="proj-date">08 / 2025</span></div>
+        <h3>Portfolio Tracker</h3>
+        <p>A portfolio tracking application built in Python to monitor investment positions, performance, and allocation over time.</p>
+        <div class="proj-tags"><span>Python</span><span>Market Data</span><span>Automation</span></div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://github.com/blueman-hacker/portfolio-tracker" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+      </article>
+
+      <article class="card proj rv">
+        <div class="proj-top"><div class="proj-icon">🛒</div><span class="proj-date">2022</span></div>
+        <h3>Naturaligy — E-Commerce Business</h3>
+        <p>Founded and built a live e-commerce storefront end to end: brand, catalog, payments, and fulfillment. My first hands-on experience running a business's numbers.</p>
+        <div class="proj-tags"><span>E-Commerce</span><span>Entrepreneurship</span><span>Operations</span></div>
+        <div class="proj-links">
+          <a class="proj-link" href="https://naturaligy.es/" target="_blank" rel="noopener">Visit site →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">03 — Education</span>
+      <h2>Academics &amp; honors</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="card edu rv">
+        <h3>Azusa Pacific University</h3>
+        <div class="sub">Azusa, California · Senior</div>
+        <dl>
+          <dt>Degree</dt><dd>B.S. — Double Major in Finance &amp; Business Analytics</dd>
+          <dt>GPA</dt><dd><span class="hl">3.90</span> cumulative</dd>
+          <dt>Graduating</dt><dd>May 2027</dd>
+        </dl>
+        <div class="notes">
+          <div class="note"><span class="hi">◆</span><span>Provost's Scholarship recipient</span></div>
+          <div class="note"><span class="hi">◆</span><span><span class="hl">5× Dean's List</span> — Fall 2023, Fall 2024, Spring 2025, Fall 2025, Spring 2026</span></div>
+          <div class="note"><span class="hi">◆</span><span>SBM Stock Pitch Competition — <span class="hl">1st Place (Spring 2026)</span> &amp; <span class="hl">2nd Place (Spring 2025)</span></span></div>
+        </div>
+      </div>
+
+      <div class="card edu rv">
+        <h3>Universidad Complutense de Madrid</h3>
+        <div class="sub">Madrid, Spain · Escuela Complutense de Verano</div>
+        <dl>
+          <dt>Program</dt><dd>Big Data — Data Analysis &amp; Machine Learning with Python</dd>
+          <dt>Term</dt><dd>July 2026 · 75 hours · 5 ECTS credits</dd>
+          <dt>Grade</dt><dd><span class="hl">10 / 10</span> — Sobresaliente</dd>
+        </dl>
+        <div class="notes">
+          <div class="note"><span class="hi">◆</span><span>Coursework delivered in Spanish at one of Europe's oldest universities</span></div>
+          <div class="note"><span class="hi">◆</span><span>Bridges quantitative finance with production data tooling</span></div>
+        </div>
+        <div class="doc-pair">
+          <figure class="doc">
+            <img src="assets/edu/ucm-diploma.jpg" alt="Universidad Complutense de Madrid diploma — Big Data" loading="lazy" data-zoom>
+            <figcaption>Diploma</figcaption>
+          </figure>
+          <figure class="doc">
+            <img src="assets/edu/ucm-letter.jpg" alt="Fundación Complutense letter confirming course completion and grade" loading="lazy" data-zoom>
+            <figcaption>University letter</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-head rv" style="margin-top:72px; margin-bottom:30px">
+      <h2 style="font-size:1.6rem">Honors</h2>
+    </div>
+    <div class="hon-grid">
+      <div class="hon rv">
+        <div class="shot"><img src="assets/honors/deans-fall-2023.jpg" alt="Dean's List Fall 2023 letter" loading="lazy" data-zoom></div>
+        <div class="cap">Dean's List<span>Fall 2023 · APU</span></div>
+      </div>
+      <div class="hon rv">
+        <div class="shot"><img src="assets/honors/deans-fall-2024.jpg" alt="Fall 2024 — Academic All-Conference, Bethany Lutheran College" loading="lazy" data-zoom></div>
+        <div class="cap">Dean's List<span>Fall 2024 · Bethany Lutheran</span></div>
+      </div>
+      <div class="hon rv">
+        <div class="shot"><img src="assets/honors/deans-spring-2025.jpg" alt="Dean's List Spring 2025 badge" loading="lazy" data-zoom></div>
+        <div class="cap">Dean's List<span>Spring 2025 · APU</span></div>
+      </div>
+      <div class="hon rv">
+        <div class="shot"><img src="assets/honors/deans-fall-2025.jpg" alt="Dean's List Fall 2025 badge" loading="lazy" data-zoom></div>
+        <div class="cap">Dean's List<span>Fall 2025 · APU</span></div>
+      </div>
+      <div class="hon rv">
+        <div class="shot"><img src="assets/honors/deans-spring-2026.jpg" alt="Dean's List Spring 2026 badge" loading="lazy" data-zoom></div>
+        <div class="cap">Dean's List<span>Spring 2026 · APU</span></div>
+      </div>
+    </div>
+
+    <div class="sec-head rv" style="margin-top:72px; margin-bottom:30px">
+      <h2 style="font-size:1.6rem">Certifications &amp; licenses</h2>
+      <p style="font-size:.96rem">Click any certificate to view it full size.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="certc rv">
+        <div class="shot"><img src="assets/certs/finra-sie.jpg" alt="FINRA Securities Industry Essentials (SIE) exam result — Pass" loading="lazy" data-zoom></div>
+        <div class="body"><div class="cn">FINRA SIE</div><div class="cb">Securities Industry Essentials · Passed Apr 2026</div></div>
+      </div>
+      <div class="certc rv">
+        <div class="shot"><img src="assets/certs/google-pm.jpg" alt="Google Project Management Professional Certificate" loading="lazy" data-zoom></div>
+        <div class="body"><div class="cn">Google Project Management</div><div class="cb">Professional Certificate · Coursera</div></div>
+      </div>
+      <div class="certc rv">
+        <div class="shot"><img src="assets/certs/bofa-ib.jpg" alt="Bank of America Investment Banking certificate" loading="lazy" data-zoom></div>
+        <div class="body"><div class="cn">Investment Banking</div><div class="cb">Bank of America</div></div>
+      </div>
+      <div class="certc rv">
+        <div class="shot badge"><img src="assets/certs/asana-workflow.jpg" alt="Asana Workflow Specialist certification" loading="lazy" data-zoom></div>
+        <div class="body"><div class="cn">Workflow Specialist</div><div class="cb">Asana · Apr 2025</div></div>
+      </div>
+      <div class="certc rv">
+        <div class="shot badge"><img src="assets/certs/asana-ai-for-work.jpg" alt="Asana AI for Work skill badge" loading="lazy" data-zoom></div>
+        <div class="body"><div class="cn">AI for Work</div><div class="cb">Asana Skill Badge</div></div>
+      </div>
+      <div class="certc rv">
+        <div class="shot badge"><img src="assets/certs/asana-foundations.jpg" alt="Asana Foundations certification" loading="lazy" data-zoom></div>
+        <div class="body"><div class="cn">Asana Foundations</div><div class="cb">Asana Academy</div></div>
+      </div>
+      <div class="certc rv">
+        <div class="shot"><img src="assets/certs/chartered-accountants.jpg" alt="Chartered Accountants certificate" loading="lazy" data-zoom></div>
+        <div class="body"><div class="cn">Running Your Own Business</div><div class="cb">Chartered Accountants</div></div>
+      </div>
+      <div class="certc rv">
+        <div class="shot badge"><img src="assets/certs/intercultural.jpg" alt="Intercultural Competence certificate" loading="lazy" data-zoom></div>
+        <div class="body"><div class="cn">Intercultural Competence</div><div class="cb">School of Business &amp; Management, APU</div></div>
+      </div>
+      <div class="certc rv">
+        <div class="shot badge"><img src="assets/certs/asana-ambassador.jpg" alt="Asana Ambassador badge" loading="lazy" data-zoom></div>
+        <div class="body"><div class="cn">Asana Ambassador</div><div class="cb"><a class="verify" href="https://www.credential.net/d18e2e6e-72ed-4c6e-ab7c-5cda1ef3a487" target="_blank" rel="noopener">Asana · Verify credential →</a></div></div>
+      </div>
+      <div class="certc rv">
+        <div class="shot badge"><img src="assets/certs/formstack.jpg" alt="Formstack certificate — School of Business and Management, Azusa Pacific University" loading="lazy" data-zoom></div>
+        <div class="body"><div class="cn">Formstack</div><div class="cb">School of Business &amp; Management, APU</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GOLF ================= -->
+<section id="golf" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">04 — Golf</span>
+      <h2>Golf</h2>
+    </div>
+
+    <div class="golf-grid">
+      <div class="golf-body rv">
+        <p>
+          Golf has been a core part of my life for over ten years, and I've played competitively
+          for most of them. The game has taught me lessons in patience, discipline, and mental
+          focus that transfer directly to how I approach analytical work.
+        </p>
+        <p>
+          What I love most is how closely it mirrors real life: a constant balance between strategy
+          and execution, pressure and composure, and learning how to move forward after a setback.
+          You cannot control the outcome of a single shot — only your process, your preparation,
+          and your response.
+        </p>
+        <p>
+          Whether I'm playing alone or in tournaments, golf continues to shape my mindset and has
+          helped me develop a calm, resilient approach to challenges on and off the course.
+        </p>
+        <div class="golf-stats">
+          <div class="gs"><div class="n">NCAA III</div><div class="k">Bethany Lutheran College, 3 seasons</div></div>
+          <div class="gs"><div class="n">10+ yrs</div><div class="k">Competitive play</div></div>
+          <div class="gs"><div class="n">All-Conf.</div><div class="k">Academic All-Conference Honors</div></div>
+          <div class="gs"><div class="n">2023–25</div><div class="k">Collegiate career</div></div>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="ratio r-golf"><img src="assets/life/golf.jpg" alt="Arturo Fraile Beltran playing golf" loading="lazy" data-zoom></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= BEYOND ================= -->
+<section id="beyond">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">05 — Beyond Work</span>
+      <h2>Travel and service</h2>
+    </div>
+    <div class="beyond-grid">
+
+      <div class="card beyond wide rv">
+        <h3><span class="bi">✈️</span> Traveling</h3>
+        <p>
+          Traveling has always been a passion — not just for the excitement of discovering new
+          places, but for the way it broadens perspective. Every trip, whether to a bustling
+          city or a quiet countryside, teaches me something new about the world, different
+          cultures, and myself.
+        </p>
+        <p>
+          Exploring unfamiliar environments pushes me out of my comfort zone and challenges me
+          to adapt, communicate, and grow. Travel has made me more open-minded, empathetic, and
+          curious — a constant reminder of how much there is to learn.
+        </p>
+      </div>
+
+      <div class="card beyond rv">
+        <h3><span class="bi">🤝</span> International Mission Trip</h3>
+        <div class="when">May 2026 · Ensenada, Mexico</div>
+        <div class="ratio r-wide svc-img"><img src="assets/life/mission-trip.jpg" alt="APU students and local community on the mission trip in Ensenada, Mexico" loading="lazy" data-zoom></div>
+        <p>
+          Traveled to Ensenada, Mexico with fellow APU students to help build a local church and
+          school in partnership with <strong>Lazarian World Homes</strong>.
+        </p>
+      </div>
+
+      <div class="card beyond rv">
+        <h3><span class="bi">🕊</span> Familia Misionera de Albacete</h3>
+        <div class="when">April 2019 · Albacete, Spain</div>
+        <div class="ratio r-wide svc-img"><img src="assets/life/service-1.jpg" alt="Volunteering with Familia Misionera de Albacete, Spain" loading="lazy" data-zoom></div>
+        <p>
+          Volunteered during Holy Week missions to provide social and spiritual support in
+          underserved communities. Participated in food drives, home visits, and elderly residences
+          visits to spend time with those experiencing loneliness, offering companionship,
+          conversation, and prayer. This experience strengthened my empathy, communication skills,
+          and commitment to service through faith.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact alt">
+  <div class="wrap">
+    <div class="rv">
+      <span class="sec-num" style="display:block; margin-bottom:14px">06 — Contact</span>
+      <h2>Let's get in touch</h2>
+      <div class="contact-links">
+        <a class="clink" href="mailto:afraile22@gmail.com"><span class="ci">✉</span> afraile22@gmail.com</a>
+        <a class="clink" href="tel:+16264918442"><span class="ci">☎</span> (626) 491-8442</a>
+        <a class="clink" href="https://www.linkedin.com/in/arturo-fb/" target="_blank" rel="noopener"><span class="ci">in</span> LinkedIn</a>
+        <a class="clink" href="https://substack.com/@arturofb" target="_blank" rel="noopener"><span class="ci">✎</span> Substack</a>
+        <a class="clink" href="assets/Arturo-Fraile-Beltran-Resume.pdf" target="_blank" rel="noopener"><span class="ci">↓</span> Resume (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>© <span id="yr">2026</span> Arturo Fraile Beltran · Los Angeles, CA</div>
+      <div class="foot-links">
+        <a href="#top">Top</a>
+        <a href="https://www.linkedin.com/in/arturo-fb/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://substack.com/@arturofb" target="_blank" rel="noopener">Substack</a>
+        <a href="mailto:afraile22@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="x" id="lbx" aria-label="Close">×</button>
+  <img id="lbimg" src="" alt="">
+</div>
+
+<!-- ================= DOCUMENT PREVIEW ================= -->
+
+<!-- ===== inlined spreadsheet views (kept in <template> so previews work
+     even when the page is opened directly from disk, where fetch() is blocked) ===== -->
+<template id="sheet-financials"><div class="xl-wrap"><div class="xl-tabs"><button class="xl-tab on" data-i="0">Income statement</button><button class="xl-tab" data-i="1">Balance Sheet</button><button class="xl-tab" data-i="2">Financial Ratios</button></div><div class="xl-pane on" data-i="0"><table class="xl" style="min-width:537px"><colgroup><col style="width:212px"><col style="width:96px"><col style="width:105px"><col style="width:124px"></colgroup><tr class="xl-h"><td colspan="4">Prufruck Corporation</td></tr><tr class="xl-h"><td colspan="4">2022 Income Statement</td></tr><tr class="xl-h"><td colspan="4">(In millons)</td></tr><tr class="xl-gap"><td colspan="4"></td></tr><tr><td></td><td colspan="2" class="n nw">2022</td><td>% of Total Sales</td></tr><tr><td class="nw">Sales</td><td></td><td class="n nw">$2,361</td><td class="n b nw">100%</td></tr><tr><td>Cost of goods sold</td><td></td><td class="n nw">$1,344</td><td class="n b nw">56.9%</td></tr><tr><td class="nw">Depreciation</td><td></td><td class="n nw">$276</td><td class="n b nw">11.7%</td></tr><tr><td>Earnings before interest and taxes</td><td></td><td class="n b nw">$741</td><td class="n b nw">31.4%</td></tr><tr><td>Interest paid</td><td></td><td class="n nw">$141</td><td class="n b nw">6%</td></tr><tr><td>Taxable income</td><td></td><td class="n b nw">$600</td><td class="n b nw">25.4%</td></tr><tr><td>Taxes (21%)</td><td></td><td class="n b nw">$126</td><td class="n b nw">5.3%</td></tr><tr><td>Net income</td><td></td><td class="n b nw">$474</td><td class="n b nw">20.1%</td></tr><tr><td class="nw">Dividends</td><td></td><td class="n nw">$158</td><td class="n b nw">6.7%</td></tr><tr><td>Addition to retained earnings</td><td></td><td class="n b nw">$316</td><td class="n b nw">13.4%</td></tr></table></div><div class="xl-pane" data-i="1"><table class="xl" style="min-width:821px"><colgroup><col style="width:219px"><col style="width:96px"><col style="width:109px"><col style="width:96px"><col style="width:109px"><col style="width:96px"><col style="width:96px"></colgroup><tr class="xl-gap"><td colspan="7"></td></tr><tr class="xl-gap"><td colspan="7"></td></tr><tr><td colspan="6">Prufruck Corporation</td><td>Assets = Liabilities + Stockholders Equity</td></tr><tr class="xl-h"><td colspan="6">Balance sheet as of December 31, 2021 and 2022</td><td></td></tr><tr class="xl-h"><td colspan="6">(in millions)</td><td></td></tr><tr class="xl-gap"><td colspan="7"></td></tr><tr><td></td><td class="n nw">2021</td><td>% of Total Assets</td><td class="n nw">2022</td><td>% of Total Assets</td><td class="nw">Change</td><td></td></tr><tr class="xl-h"><td class="nw">Assets</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-h"><td>Current Assets</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="nw">Cash</td><td class="n nw">$84.00</td><td class="n b nw">2.5%</td><td class="n nw">$98.00</td><td class="n b nw">2.7%</td><td class="n nw">0.2%</td><td></td></tr><tr><td>Accounts Receivable</td><td class="n nw">$165</td><td class="n b nw">4.9%</td><td class="n nw">$188</td><td class="n b nw">5.2%</td><td class="n nw">0.3%</td><td></td></tr><tr><td class="nw">Inventory</td><td class="n nw">$393</td><td class="n b nw">11.7%</td><td class="n nw">$422</td><td class="n b nw">11.6%</td><td class="n nw">-0%</td><td></td></tr><tr><td class="nw">Total</td><td class="n b nw">$642</td><td class="n b nw">19%</td><td class="n b nw">$708</td><td class="n b nw">19.5%</td><td class="n nw">0.5%</td><td></td></tr><tr class="xl-h"><td>Fixed Assets</td><td></td><td class="b"></td><td></td><td class="b"></td><td></td><td></td></tr><tr><td>Net Plant and Equipment</td><td class="n nw">$2,731</td><td class="n b nw">81%</td><td class="n nw">$2,922</td><td class="n b nw">80.5%</td><td class="n nw">-0.5%</td><td></td></tr><tr><td>Total Assets</td><td class="n b nw">$3,373</td><td class="n b nw">100%</td><td class="n b nw">$3,630</td><td class="n b nw">100%</td><td class="n nw">0%</td><td></td></tr><tr class="xl-gap"><td colspan="7"></td></tr><tr class="xl-h"><td>Liabilities and Owners Equity</td><td></td><td class="b"></td><td></td><td class="b"></td><td></td><td></td></tr><tr class="xl-h"><td>Current liabilities</td><td></td><td class="b"></td><td></td><td class="b"></td><td></td><td></td></tr><tr><td>Accounts payable</td><td class="n nw">$312</td><td class="n b nw">9.2%</td><td class="n nw">$344</td><td class="n b nw">9.5%</td><td class="n nw">0.2%</td><td></td></tr><tr><td>Notes payable</td><td class="n nw">$231</td><td class="n b nw">6.8%</td><td class="n nw">$204</td><td class="n b nw">5.6%</td><td class="n nw">-1.2%</td><td></td></tr><tr><td class="nw">Total</td><td class="n b nw">$543</td><td class="n b nw">16.1%</td><td class="n b nw">$548</td><td class="n b nw">15.1%</td><td class="n nw">-1%</td><td></td></tr><tr><td>Long-term debt</td><td class="n nw">$531</td><td class="n b nw">15.7%</td><td class="n nw">$457</td><td class="n b nw">12.6%</td><td class="n nw">-3.2%</td><td></td></tr><tr class="xl-h"><td>Owners equity</td><td></td><td class="b"></td><td></td><td class="b"></td><td></td><td></td></tr><tr><td>Common stock and Paid-In Surplus</td><td class="n nw">$500</td><td class="n b nw">14.8%</td><td class="n nw">$510</td><td class="n b nw">14%</td><td class="n nw">-0.8%</td><td></td></tr><tr><td>Retained earnings</td><td class="n nw">$1,799</td><td class="n b nw">53.3%</td><td class="n nw">$2,115</td><td class="n b nw">58.3%</td><td class="n nw">4.9%</td><td></td></tr><tr><td class="nw">Total</td><td class="n b nw">$2,299</td><td class="n b nw">68.2%</td><td class="n b nw">$2,625</td><td class="n b nw">72.3%</td><td class="n nw">4.2%</td><td></td></tr><tr><td>Total Liabilites and Owners Equity</td><td class="n b nw">$3,373</td><td class="n b nw">100%</td><td class="n b nw">$3,630</td><td class="n b nw">100%</td><td class="n nw">0%</td><td></td></tr></table></div><div class="xl-pane" data-i="2"><table class="xl" style="min-width:1810px"><colgroup><col style="width:375px"><col style="width:96px"><col style="width:96px"><col style="width:380px"><col style="width:208px"><col style="width:159px"><col style="width:116px"><col style="width:380px"></colgroup><tr class="xl-h"><td colspan="7" class="b">Financial Ratios. Prufuck Corporation. Year 2022</td><td></td></tr><tr class="xl-w"><td colspan="7"><div class="xl-prose">Interpretations: assuming that Prufruck Corporation is a Chemical (basic) company. The interpretation and the standards found for the ratios if they are either good or bad are based on the information I have pulled from NYU Stern Data website, Full Ratio website, Ready Ratios website, the Corporate Finance Institute, Zycrus, the U.S. Bureau of Labor Statistics, and the Indonesian Stock Exchange. 
+Furthermore, the definitions are based on the class discussions and what was talked between students and the Professor. Besides basing my definitions on other trust worthy sources such as the Essential of Corporate Finance Book and other reputational sources such as Investopedia and the Corporate Finance Institute to provide more insight to the definitions I have generated.</div></td><td></td></tr><tr class="xl-w"><td colspan="7"><div class="xl-prose">I know that the information I have pulled for the standards might not be the best type of information, mainly because the information is based on the financial statements from publicaly traded companies which are not proportional in dimension to other small companies as can be Prufruck Corporation</div></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Common Financial Ratios</td><td class="b"></td><td class="b"></td><td class="b nw">Interpretation</td><td class="b nw">Standard</td><td class="b nw">Links</td><td class="b nw">G/B</td><td class="b">Extra Notes</td></tr><tr class="xl-h"><td>I. Short-Term Solvency (Liquidity) Measures</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Current Ratio</td><td></td><td></td><td class="b">Definition: current ratio is a measure of short-term liquidity. The higher the current ratio the better because it indicates liquidity</td><td class="b"></td><td></td><td></td><td></td></tr><tr><td>Current Assets/Current Liabilities</td><td class="n nw">1.29</td><td class="nw">times</td><td>For every 1.290 dollar in current asset there is $1 in liabilities. Average on the industry is 2.17 which makes this ratio being below this number, which is not ideal</td><td>Above 2.17 is good</td><td class="nw">FullRatio</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Quick ratio</td><td></td><td></td><td>Definition: Inventory is often the least liquid current asset. To further evaluate liquidity, the quick ratio is computed like the current ratio, except inventory is omitted</td><td></td><td></td><td></td><td></td></tr><tr><td>(Current Assets-Inventory)/Current Liabilities</td><td class="n nw">0.52</td><td class="nw">times</td><td>For every current asset minus the inventory there is double the liabilities. Average on the industry 1.08</td><td>Above 1.08 is good</td><td class="nw">FullRatio</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Cash Ratio</td><td></td><td></td><td>Definition: short-term creditors are interested in this one. It is the ability of the company to meet the short-term liabilities by using only cash and other cash equivilants which are the most liquid assets</td><td></td><td></td><td></td><td></td></tr><tr><td>Cash/Current Liabilities</td><td class="n nw">0.18</td><td class="nw">times</td><td>Cash it is only 17.88% compared to the current liabilities. According to the standard this ratio would be bad because the ideal is not below 0.5 and this one is 0.17 making it fall way behind the number 0.5</td><td>No ideal number, a ratio of not lower than 0.5 to 1 is usually preferred</td><td>Corporate Finance Institute</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-h"><td>II. Long-Term Solvency Measures , or financial leverage, ratios</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Total debt ratio</td><td></td><td></td><td>Definition: it is the total amount of assets a company has compared to the total amount of liabilities. The reason why you substract Total Equity from Total Assets is to calculate the total number of Total Liabilities considering short-term and long-term on the balance sheet</td><td></td><td></td><td></td><td></td></tr><tr><td>(Total Assets-Total Equity)/Total Assets</td><td class="n nw">0.28</td><td class="nw">times</td><td>The Total Debt Ratio for P Corp is 0.28 in debt for evert dollar in total assets. The average in the industry is set to be 0.49, thefore this ratio is very good for P Corp because it means a smaller amount of liabilities compared to their assents making them a pretty solvent company in the long-term</td><td>Average 0.49</td><td>Ready Ratios</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Debt equity ratio</td><td></td><td></td><td class="b">Definition: calculates the weight of total debt including long-term and short-term against total shareholders’ equity</td><td class="b"></td><td></td><td></td><td></td></tr><tr><td>Total debt/Total equity</td><td class="n nw">0.38</td><td class="nw">times</td><td>The company has 38% of debt compared to the equity. Below the average of industry which means that is good because the use less debt to finance themselves. A higher ratio is associated with risk, howver P Corp is below the risk that this industry holds</td><td>Average on the industry 57.99%</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Equity multiplier</td><td></td><td></td><td class="b">Definition: measures the portion of the company’s assets that are financed by equity. This ratio tells us the level of debt financing that a company has used to acquire assets and maintain operations. A higher ratio indicates that a significant portion of the firm assets are financed by debt, howver if it is too low means that the firm is unable to obtain money from leanders or the just avoid the use of debt to acquire assets</td><td class="b"></td><td></td><td></td><td></td></tr><tr><td>Total Assets/Total Equity</td><td class="n nw">1.38</td><td class="nw">times</td><td>For every dollar of equity P Corp has $1.38 in assets. This ratio has its pros and cons for P Corp because it is true that it is lower than the average in the industry which is 1.58 meaning less financial risk and more equity</td><td>Average on the industry 1.58</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Times interest earned ratio</td><td></td><td></td><td>Definition: this ratio is a common measure of long-term solvency. This ratio measures how well a company has its interest obligations covered. Usually the higher the ratio the better</td><td></td><td></td><td></td><td></td></tr><tr><td class="nw">EBIT/Interest</td><td class="n nw">5.26</td><td class="nw">times</td><td>The company makes 5.25 times more the interest the have to pay. The average ratio for the industry is 3.03 . The ratio for P Corp is pretty good compared to the industry, however is also condidered high because a very high ratio is a sign of having cash stopped and not investing it for the growth of the company</td><td>Average on the industry 3.03</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Cash coverage ratio</td><td></td><td></td><td>Definition: used to compare the company’s cash balance to its annual interest expense.  This is a very conservative metric, as it compares only cash on hand (no other assets) to the interest expense the company has relative to its debt.</td><td></td><td></td><td></td><td></td></tr><tr><td>(EBIT + Depreciation)/Interest</td><td class="n nw">7.21</td><td class="nw">times</td><td>The company has 7.21 times more cash than the interest they have to pay. They can pay up to 7.2 times the interest they have to pay with the cash and only cash not taking into consideration other assets to pay their interest. Way above the industry, good ratio</td><td>Average on the industry 3.23</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-h"><td>III. Asset Utilization, or turnover, ratios</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Inventory turnover</td><td></td><td></td><td>Definition: How many times a company has sold and replaced the inventory within a certain period of time. Usually one fiscal year</td><td></td><td></td><td></td><td></td></tr><tr><td>Cost of goods sold/Inventory</td><td class="n nw">3.18</td><td class="nw">times</td><td>The company replaces the inventory 3.18 times over the year. Overstocking. The average on the industry is at 759 which makes P Corp very bad in this ratio since they take very long time to replace their inventory compared to their competitors</td><td>Average on the industry 759</td><td>Ready Ratios</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Days sales in inventory</td><td></td><td></td><td>Definition: The time it takes to sell all the inventory</td><td></td><td></td><td></td><td></td></tr><tr><td>365 days/inventory turnover</td><td class="n nw">114.61</td><td class="nw">days</td><td>Its takes 115 days to sell all the inventory. This one is corralated to inventory turnover. The average on the industry would be at 0.48 meaning that P Corp is too slow</td><td>Average on the industry 0.48</td><td>Ready Ratios</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Receivables turnover</td><td></td><td></td><td>Definition: How often a company collects money that is owed to them from customer</td><td></td><td></td><td></td><td></td></tr><tr><td>Sales/Accounts receivable</td><td class="n nw">12.56</td><td class="nw">times</td><td>On average the company collects their accounts receivable 12.55 times per year. P Corp again is very slow to do this since their competitors are at very high-performance ratios on an average of 385</td><td>Average on the industry 385</td><td>Ready Ratios</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Receivables period</td><td></td><td></td><td>Definition: Time in days  it takes to our customer to pay us</td><td></td><td></td><td></td><td></td></tr><tr><td>365 days/receivables turnover</td><td class="n nw">29.06</td><td class="nw">days</td><td>Our customer took an average of 29 days to pay us. Again this one is correlated to the receivables turnover ratio and the receivables period is very slow since the average is at 0.94</td><td>Average on the industry 0.94</td><td>Ready Ratios</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Operating cycle</td><td></td><td></td><td>Definition:Time it takes to buy goods, sell them and receive the payment</td><td></td><td></td><td></td><td></td></tr><tr><td>Inventory period + accounts receivable period</td><td class="n nw">143.67</td><td class="nw">days</td><td>On average it took us 144 days since the day we bought the inventory we sold it all and received the payment. Once again very bad ratio being very slow collecting because the average on the industry is at 1.42</td><td>Average on the industry 1.42</td><td>No link. I calculated myself summing F44 and F49 to get the average</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Payables turnover</td><td></td><td></td><td>Definition: How many times are paid our debts within a specific period of time. Usually a fiscal year</td><td></td><td></td><td></td><td></td></tr><tr><td>Cost of goods sold/Accounts payable</td><td class="n nw">3.91</td><td class="nw">times</td><td>This means suppliers are paid 3.9 times a year. Good ratio between 8-10.</td><td>Average between 8-10</td><td class="nw">Zycus</td><td class="nw">Bad</td><td>Could not find a breakdown of a table for each industry, however according to this source an ideal average would be from 8 to 10</td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Payable period</td><td></td><td></td><td>Definition: The avarege time it takes to pay our suppiers</td><td></td><td></td><td></td><td></td></tr><tr><td>365 days/payables turnover</td><td class="n nw">93.42</td><td class="nw">days</td><td>It took us an average of 93 days to pay off our bills. This one correlates to payables turnover, therefore this one is bad too</td><td>Average 35 to 45</td><td class="nw">Zycus</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Cash cycle</td><td></td><td></td><td>Definition: Time it takes to convert our investment into cash</td><td></td><td></td><td></td><td></td></tr><tr><td>operating cycle - accounts payable period</td><td class="n nw">50.25</td><td class="nw">days</td><td>There is a 50 day delay since the day we pay for the merchandise to the time we collect the sale. P Corp again is slow here since the average on the marke is --33.58 and 44.58 which means that the inventory is sold before you have to pay for it</td><td>Average between -33.58 and -44.58</td><td>No link. I calculated myself summing F53 and F59 to get the average</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Total Asset turnover</td><td></td><td></td><td>Definition: Efficiency of a company using their assets to produce sales</td><td></td><td></td><td></td><td></td></tr><tr><td>Sales/total assets</td><td class="n nw">0.65</td><td class="nw">dollar</td><td>The company makes 0.65 for every dollar of assets</td><td>Average 151,711</td><td>Ready Ratios</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Capital intensity</td><td></td><td></td><td>Definition: How much money a company needs to generate money in sells</td><td></td><td></td><td></td><td></td></tr><tr><td>Total assets/sales</td><td class="n nw">1.54</td><td class="nw">times</td><td>The company needs $1.54 to make a $1 in sells. This ratio is better than the industry because it means that P Corp needs half the money to make one dollar on sales</td><td>Average is 3.3</td><td class="nw">BLS</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td>IV. Profitability ratios</td><td></td><td></td><td>Definition: How efficiently the firm uses it assets and how efficiently the firm manages the operations</td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Profit margin</td><td></td><td></td><td>Definition: Measures how much profit a company makes of the revenue</td><td></td><td></td><td></td><td></td></tr><tr><td>Net income/sales</td><td class="n nw">0.2</td><td class="nw">times</td><td>The company keeps $0.20 of everything that they make as a revenue. Or 20% of what they make. This ratio is good compared to the industry since it is very similar to their competitors</td><td>Average is 20.4% or 0.204</td><td>Full Ratio</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Return on assets (ROA)</td><td></td><td></td><td>Definition: A mesure of how efficiently a company uses it assets to generate profit</td><td></td><td></td><td></td><td></td></tr><tr><td>Net income/total assets</td><td class="n nw">0.13</td><td class="nw">times</td><td>The company generates 13.06% return on total assets. The average chemical company makes 160% of return which makes P Corp once again fall behind their competitors</td><td>Average is 1.6</td><td>Full Ratio</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Return on equity (ROE)</td><td></td><td></td><td>Definition: A measure of how effectively a company uses shareholder equity to generate profit</td><td></td><td></td><td></td><td></td></tr><tr><td>Net income/total equity</td><td class="n nw">0.18</td><td class="nw">times</td><td>The shareholders make 18.06% of what they invest while the average makes 6.37%, it is a profitable company for investors</td><td>Average 6.37%</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b nw">ROE</td><td></td><td></td><td>Definition: A measure of how effectively a company uses shareholder equity to generate profit</td><td></td><td></td><td></td><td></td></tr><tr><td>(Net income/sales)*(Sales/Assets)*(Assets/Equity)</td><td class="n nw">0.18</td><td class="nw">times</td><td>The shareholders make 18.06% of what they invest</td><td>Average 6.37%</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td>V. Market value ratio</td><td></td><td></td><td>Definition: financial metrics that takes companies stock price that compares to other businesses in the industry</td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Price per share</td><td class="n nw">115</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="b">Shares outstanding</td><td class="n nw">33</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="b">Sales per share</td><td class="n nw">71.55</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="b">Book value per share</td><td class="n nw">79.55</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Enterprise value</td><td></td><td></td><td>Definition: the total market the value of the stock plus the total debt minus cash</td><td></td><td></td><td></td><td></td></tr><tr><td>Market Cap + Total Debt - Cash</td><td class="n nw">4,702</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="b nw">EBITDA</td><td></td><td></td><td class="b">Definition: are the earning before taxes, interest, taxes, depreciation, and amortization</td><td class="b"></td><td></td><td></td><td></td></tr><tr><td>Net Income + Interest + Taxes + Depreciation + Amortization</td><td class="n nw">1,017</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Earnings per share</td><td></td><td></td><td>Definition: company&#x27;s profit per every share of common stock</td><td></td><td></td><td></td><td></td></tr><tr><td>Net Income/Shares outstanding</td><td class="n nw">14.36</td><td class="nw">times</td><td>For each otustanding share the company made 14 dollars while the average for the industry is 55.69. P Corp is making less out of their shares than their competitors</td><td>Average 55.69</td><td class="nw">IDX</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Price-earnings ratio</td><td></td><td></td><td class="b">Definition: how much investors are willing to pay for each dollar a company makes by comparing the price they are paying against the earning they are getting for the price they have paid</td><td class="b"></td><td class="b"></td><td></td><td></td></tr><tr><td>Price per share/earning per share</td><td class="n nw">8.01</td><td class="nw">times</td><td>For every dollar of earnings the company generates, shareholders are investing  8 dollars. This is a good ratio for P Corp because means that investors have to pay less to make one dollar of profit compared to the rest of the industry</td><td>Average is 15.75</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Price-sales ratio</td><td></td><td></td><td>Definition: is a formula used to measure the total value that investors place on the company in comparison to the total revenue generated by the business. It helps investors know how much they are truly paying for the company</td><td></td><td></td><td></td><td></td></tr><tr><td>Price per share/sales per share</td><td class="n nw">1.61</td><td class="nw">times</td><td>For every dollar of sales the company makes, investors are willing to pay 1.60 for their stock. The company is overvalue because you can invest in the average company for 0.7 instead of 1.6</td><td>Average is 0.70</td><td class="nw">NYU</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Market-to-book ratio</td><td></td><td></td><td class="b">Definition: we are comparing how the market is valuating the stock price against the orginal value that the books say it&#x27;s worth. If &gt; 1 successful creating value. If &lt; 1 not successful. Page 65 book</td><td class="b"></td><td class="b"></td><td></td><td></td></tr><tr><td>Market value per share/book value per share</td><td class="n nw">1.45</td><td class="nw">times</td><td>The company&#x27;s stock price is worth 1.44 times the book value. While is below the average is still a solid ratio</td><td>Average 1.61</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">EBITDA Ratio</td><td></td><td></td><td class="nw">Definition:</td><td></td><td></td><td></td><td></td></tr><tr><td>Enterprise value/EBITDA</td><td class="n nw">4.62</td><td class="nw">times</td><td>The total value of the company is 4.62 times greater than the operating cash flow generated by the company. Cash flow because we are taking into consideration non-cash items such as amortization, depreciation, interest, and taxes. This is a bad ratio for P Corp because the average in the industry has 7.97 ratio, therefor P Corp is behind the rest of the companies in the industry</td><td>Average 7.97</td><td class="nw">NYU</td><td class="nw">Bad</td><td></td></tr></table></div></div></template>
+<template id="sheet-valuation"><div class="xl-wrap"><div class="xl-tabs"><button class="xl-tab on" data-i="0">Income statement</button><button class="xl-tab" data-i="1">Balance Sheet</button><button class="xl-tab" data-i="2">Financial Ratios</button></div><div class="xl-pane on" data-i="0"><table class="xl" style="min-width:537px"><colgroup><col style="width:212px"><col style="width:96px"><col style="width:105px"><col style="width:124px"></colgroup><tr class="xl-h"><td colspan="4">JP Morgan</td></tr><tr class="xl-h"><td colspan="4">2024 Income Statement</td></tr><tr class="xl-h"><td colspan="4">(In millons)</td></tr><tr class="xl-gap"><td colspan="4"></td></tr><tr><td></td><td colspan="2" class="n nw">2024</td><td>% of Total Sales</td></tr><tr><td class="nw">Sales</td><td></td><td class="n nw">$2,361</td><td class="n b nw">100%</td></tr><tr><td>Cost of goods sold</td><td></td><td class="n nw">$1,344</td><td class="n b nw">56.9%</td></tr><tr><td class="nw">Depreciation</td><td></td><td class="n nw">$276</td><td class="n b nw">11.7%</td></tr><tr><td>Earnings before interest and taxes</td><td></td><td class="n b nw">$741</td><td class="n b nw">31.4%</td></tr><tr><td>Interest paid</td><td></td><td class="n nw">$141</td><td class="n b nw">6%</td></tr><tr><td>Taxable income</td><td></td><td class="n b nw">$600</td><td class="n b nw">25.4%</td></tr><tr><td>Taxes (21%)</td><td></td><td class="n b nw">$126</td><td class="n b nw">5.3%</td></tr><tr><td>Net income</td><td></td><td class="n b nw">$474</td><td class="n b nw">20.1%</td></tr><tr><td class="nw">Dividends</td><td></td><td class="n nw">$158</td><td class="n b nw">6.7%</td></tr><tr><td>Addition to retained earnings</td><td></td><td class="n b nw">$316</td><td class="n b nw">13.4%</td></tr></table></div><div class="xl-pane" data-i="1"><table class="xl" style="min-width:821px"><colgroup><col style="width:219px"><col style="width:96px"><col style="width:109px"><col style="width:96px"><col style="width:109px"><col style="width:96px"><col style="width:96px"></colgroup><tr class="xl-gap"><td colspan="7"></td></tr><tr class="xl-gap"><td colspan="7"></td></tr><tr><td colspan="6">JP Morgan Chase</td><td>Assets = Liabilities + Stockholders Equity</td></tr><tr class="xl-h"><td colspan="6">Balance sheet as of December 31, 2024</td><td></td></tr><tr class="xl-h"><td colspan="6">(in millions)</td><td></td></tr><tr class="xl-gap"><td colspan="7"></td></tr><tr><td></td><td class="n nw">2023</td><td>% of Total Assets</td><td class="n nw">2024</td><td>% of Total Assets</td><td class="nw">Change</td><td></td></tr><tr class="xl-h"><td class="nw">Assets</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-h"><td>Current Assets</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="nw">Cash</td><td class="n nw">$84.00</td><td class="n b nw">2.5%</td><td class="n nw">$98.00</td><td class="n b nw">2.7%</td><td class="n nw">0.2%</td><td></td></tr><tr><td>Accounts Receivable</td><td class="n nw">$165</td><td class="n b nw">4.9%</td><td class="n nw">$188</td><td class="n b nw">5.2%</td><td class="n nw">0.3%</td><td></td></tr><tr><td class="nw">Inventory</td><td class="n nw">$393</td><td class="n b nw">11.7%</td><td class="n nw">$422</td><td class="n b nw">11.6%</td><td class="n nw">-0%</td><td></td></tr><tr><td class="nw">Total</td><td class="n b nw">$642</td><td class="n b nw">19%</td><td class="n b nw">$708</td><td class="n b nw">19.5%</td><td class="n nw">0.5%</td><td></td></tr><tr class="xl-h"><td>Fixed Assets</td><td></td><td class="b"></td><td></td><td class="b"></td><td></td><td></td></tr><tr><td>Net Plant and Equipment</td><td class="n nw">$2,731</td><td class="n b nw">81%</td><td class="n nw">$2,922</td><td class="n b nw">80.5%</td><td class="n nw">-0.5%</td><td></td></tr><tr><td>Total Assets</td><td class="n b nw">$3,373</td><td class="n b nw">100%</td><td class="n b nw">$3,630</td><td class="n b nw">100%</td><td class="n nw">0%</td><td></td></tr><tr class="xl-gap"><td colspan="7"></td></tr><tr class="xl-h"><td>Liabilities and Owners Equity</td><td></td><td class="b"></td><td></td><td class="b"></td><td></td><td></td></tr><tr class="xl-h"><td>Current liabilities</td><td></td><td class="b"></td><td></td><td class="b"></td><td></td><td></td></tr><tr><td>Accounts payable</td><td class="n nw">$312</td><td class="n b nw">9.2%</td><td class="n nw">$344</td><td class="n b nw">9.5%</td><td class="n nw">0.2%</td><td></td></tr><tr><td>Notes payable</td><td class="n nw">$231</td><td class="n b nw">6.8%</td><td class="n nw">$204</td><td class="n b nw">5.6%</td><td class="n nw">-1.2%</td><td></td></tr><tr><td class="nw">Total</td><td class="n b nw">$543</td><td class="n b nw">16.1%</td><td class="n b nw">$548</td><td class="n b nw">15.1%</td><td class="n nw">-1%</td><td></td></tr><tr><td>Long-term debt</td><td class="n nw">$531</td><td class="n b nw">15.7%</td><td class="n nw">$457</td><td class="n b nw">12.6%</td><td class="n nw">-3.2%</td><td></td></tr><tr class="xl-h"><td>Owners equity</td><td></td><td class="b"></td><td></td><td class="b"></td><td></td><td></td></tr><tr><td>Common stock and Paid-In Surplus</td><td class="n nw">$500</td><td class="n b nw">14.8%</td><td class="n nw">$510</td><td class="n b nw">14%</td><td class="n nw">-0.8%</td><td></td></tr><tr><td>Retained earnings</td><td class="n nw">$1,799</td><td class="n b nw">53.3%</td><td class="n nw">$2,115</td><td class="n b nw">58.3%</td><td class="n nw">4.9%</td><td></td></tr><tr><td class="nw">Total</td><td class="n b nw">$2,299</td><td class="n b nw">68.2%</td><td class="n b nw">$2,625</td><td class="n b nw">72.3%</td><td class="n nw">4.2%</td><td></td></tr><tr><td>Total Liabilites and Owners Equity</td><td class="n b nw">$3,373</td><td class="n b nw">100%</td><td class="n b nw">$3,630</td><td class="n b nw">100%</td><td class="n nw">0%</td><td></td></tr></table></div><div class="xl-pane" data-i="2"><table class="xl" style="min-width:1810px"><colgroup><col style="width:375px"><col style="width:96px"><col style="width:96px"><col style="width:380px"><col style="width:208px"><col style="width:159px"><col style="width:116px"><col style="width:380px"></colgroup><tr class="xl-h"><td colspan="7" class="b">Financial Ratios. Prufuck Corporation. Year 2022</td><td></td></tr><tr class="xl-w"><td colspan="7"><div class="xl-prose">Interpretations: assuming that Prufruck Corporation is a Chemical (basic) company. The interpretation and the standards found for the ratios if they are either good or bad are based on the information I have pulled from NYU Stern Data website, Full Ratio website, Ready Ratios website, the Corporate Finance Institute, Zycrus, the U.S. Bureau of Labor Statistics, and the Indonesian Stock Exchange. 
+Furthermore, the definitions are based on the class discussions and what was talked between students and the Professor. Besides basing my definitions on other trust worthy sources such as the Essential of Corporate Finance Book and other reputational sources such as Investopedia and the Corporate Finance Institute to provide more insight to the definitions I have generated.</div></td><td></td></tr><tr class="xl-w"><td colspan="7"><div class="xl-prose">I know that the information I have pulled for the standards might not be the best type of information, mainly because the information is based on the financial statements from publicaly traded companies which are not proportional in dimension to other small companies as can be Prufruck Corporation</div></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Common Financial Ratios</td><td class="b"></td><td class="b"></td><td class="b nw">Interpretation</td><td class="b nw">Standard</td><td class="b nw">Links</td><td class="b nw">G/B</td><td class="b">Extra Notes</td></tr><tr class="xl-h"><td>I. Short-Term Solvency (Liquidity) Measures</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Current Ratio</td><td></td><td></td><td class="b">Definition: current ratio is a measure of short-term liquidity. The higher the current ratio the better because it indicates liquidity</td><td class="b"></td><td></td><td></td><td></td></tr><tr><td>Current Assets/Current Liabilities</td><td class="n nw">1.29</td><td class="nw">times</td><td>For every 1.290 dollar in current asset there is $1 in liabilities. Average on the industry is 2.17 which makes this ratio being below this number, which is not ideal</td><td>Above 2.17 is good</td><td class="nw">FullRatio</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Quick ratio</td><td></td><td></td><td>Definition: Inventory is often the least liquid current asset. To further evaluate liquidity, the quick ratio is computed like the current ratio, except inventory is omitted</td><td></td><td></td><td></td><td></td></tr><tr><td>(Current Assets-Inventory)/Current Liabilities</td><td class="n nw">0.52</td><td class="nw">times</td><td>For every current asset minus the inventory there is double the liabilities. Average on the industry 1.08</td><td>Above 1.08 is good</td><td class="nw">FullRatio</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Cash Ratio</td><td></td><td></td><td>Definition: short-term creditors are interested in this one. It is the ability of the company to meet the short-term liabilities by using only cash and other cash equivilants which are the most liquid assets</td><td></td><td></td><td></td><td></td></tr><tr><td>Cash/Current Liabilities</td><td class="n nw">0.18</td><td class="nw">times</td><td>Cash it is only 17.88% compared to the current liabilities. According to the standard this ratio would be bad because the ideal is not below 0.5 and this one is 0.17 making it fall way behind the number 0.5</td><td>No ideal number, a ratio of not lower than 0.5 to 1 is usually preferred</td><td>Corporate Finance Institute</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-h"><td>II. Long-Term Solvency Measures , or financial leverage, ratios</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Total debt ratio</td><td></td><td></td><td>Definition: it is the total amount of assets a company has compared to the total amount of liabilities. The reason why you substract Total Equity from Total Assets is to calculate the total number of Total Liabilities considering short-term and long-term on the balance sheet</td><td></td><td></td><td></td><td></td></tr><tr><td>(Total Assets-Total Equity)/Total Assets</td><td class="n nw">0.28</td><td class="nw">times</td><td>The Total Debt Ratio for P Corp is 0.28 in debt for evert dollar in total assets. The average in the industry is set to be 0.49, thefore this ratio is very good for P Corp because it means a smaller amount of liabilities compared to their assents making them a pretty solvent company in the long-term</td><td>Average 0.49</td><td>Ready Ratios</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Debt equity ratio</td><td></td><td></td><td class="b">Definition: calculates the weight of total debt including long-term and short-term against total shareholders’ equity</td><td class="b"></td><td></td><td></td><td></td></tr><tr><td>Total debt/Total equity</td><td class="n nw">0.38</td><td class="nw">times</td><td>The company has 38% of debt compared to the equity. Below the average of industry which means that is good because the use less debt to finance themselves. A higher ratio is associated with risk, howver P Corp is below the risk that this industry holds</td><td>Average on the industry 57.99%</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Equity multiplier</td><td></td><td></td><td class="b">Definition: measures the portion of the company’s assets that are financed by equity. This ratio tells us the level of debt financing that a company has used to acquire assets and maintain operations. A higher ratio indicates that a significant portion of the firm assets are financed by debt, howver if it is too low means that the firm is unable to obtain money from leanders or the just avoid the use of debt to acquire assets</td><td class="b"></td><td></td><td></td><td></td></tr><tr><td>Total Assets/Total Equity</td><td class="n nw">1.38</td><td class="nw">times</td><td>For every dollar of equity P Corp has $1.38 in assets. This ratio has its pros and cons for P Corp because it is true that it is lower than the average in the industry which is 1.58 meaning less financial risk and more equity</td><td>Average on the industry 1.58</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Times interest earned ratio</td><td></td><td></td><td>Definition: this ratio is a common measure of long-term solvency. This ratio measures how well a company has its interest obligations covered. Usually the higher the ratio the better</td><td></td><td></td><td></td><td></td></tr><tr><td class="nw">EBIT/Interest</td><td class="n nw">5.26</td><td class="nw">times</td><td>The company makes 5.25 times more the interest the have to pay. The average ratio for the industry is 3.03 . The ratio for P Corp is pretty good compared to the industry, however is also condidered high because a very high ratio is a sign of having cash stopped and not investing it for the growth of the company</td><td>Average on the industry 3.03</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Cash coverage ratio</td><td></td><td></td><td>Definition: used to compare the company’s cash balance to its annual interest expense.  This is a very conservative metric, as it compares only cash on hand (no other assets) to the interest expense the company has relative to its debt.</td><td></td><td></td><td></td><td></td></tr><tr><td>(EBIT + Depreciation)/Interest</td><td class="n nw">7.21</td><td class="nw">times</td><td>The company has 7.21 times more cash than the interest they have to pay. They can pay up to 7.2 times the interest they have to pay with the cash and only cash not taking into consideration other assets to pay their interest. Way above the industry, good ratio</td><td>Average on the industry 3.23</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr class="xl-h"><td>III. Asset Utilization, or turnover, ratios</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Inventory turnover</td><td></td><td></td><td>Definition: How many times a company has sold and replaced the inventory within a certain period of time. Usually one fiscal year</td><td></td><td></td><td></td><td></td></tr><tr><td>Cost of goods sold/Inventory</td><td class="n nw">3.18</td><td class="nw">times</td><td>The company replaces the inventory 3.18 times over the year. Overstocking. The average on the industry is at 759 which makes P Corp very bad in this ratio since they take very long time to replace their inventory compared to their competitors</td><td>Average on the industry 759</td><td>Ready Ratios</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Days sales in inventory</td><td></td><td></td><td>Definition: The time it takes to sell all the inventory</td><td></td><td></td><td></td><td></td></tr><tr><td>365 days/inventory turnover</td><td class="n nw">114.61</td><td class="nw">days</td><td>Its takes 115 days to sell all the inventory. This one is corralated to inventory turnover. The average on the industry would be at 0.48 meaning that P Corp is too slow</td><td>Average on the industry 0.48</td><td>Ready Ratios</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Receivables turnover</td><td></td><td></td><td>Definition: How often a company collects money that is owed to them from customer</td><td></td><td></td><td></td><td></td></tr><tr><td>Sales/Accounts receivable</td><td class="n nw">12.56</td><td class="nw">times</td><td>On average the company collects their accounts receivable 12.55 times per year. P Corp again is very slow to do this since their competitors are at very high-performance ratios on an average of 385</td><td>Average on the industry 385</td><td>Ready Ratios</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Receivables period</td><td></td><td></td><td>Definition: Time in days  it takes to our customer to pay us</td><td></td><td></td><td></td><td></td></tr><tr><td>365 days/receivables turnover</td><td class="n nw">29.06</td><td class="nw">days</td><td>Our customer took an average of 29 days to pay us. Again this one is correlated to the receivables turnover ratio and the receivables period is very slow since the average is at 0.94</td><td>Average on the industry 0.94</td><td>Ready Ratios</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Operating cycle</td><td></td><td></td><td>Definition:Time it takes to buy goods, sell them and receive the payment</td><td></td><td></td><td></td><td></td></tr><tr><td>Inventory period + accounts receivable period</td><td class="n nw">143.67</td><td class="nw">days</td><td>On average it took us 144 days since the day we bought the inventory we sold it all and received the payment. Once again very bad ratio being very slow collecting because the average on the industry is at 1.42</td><td>Average on the industry 1.42</td><td>No link. I calculated myself summing F44 and F49 to get the average</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Payables turnover</td><td></td><td></td><td>Definition: How many times are paid our debts within a specific period of time. Usually a fiscal year</td><td></td><td></td><td></td><td></td></tr><tr><td>Cost of goods sold/Accounts payable</td><td class="n nw">3.91</td><td class="nw">times</td><td>This means suppliers are paid 3.9 times a year. Good ratio between 8-10.</td><td>Average between 8-10</td><td class="nw">Zycus</td><td class="nw">Bad</td><td>Could not find a breakdown of a table for each industry, however according to this source an ideal average would be from 8 to 10</td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Payable period</td><td></td><td></td><td>Definition: The avarege time it takes to pay our suppiers</td><td></td><td></td><td></td><td></td></tr><tr><td>365 days/payables turnover</td><td class="n nw">93.42</td><td class="nw">days</td><td>It took us an average of 93 days to pay off our bills. This one correlates to payables turnover, therefore this one is bad too</td><td>Average 35 to 45</td><td class="nw">Zycus</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Cash cycle</td><td></td><td></td><td>Definition: Time it takes to convert our investment into cash</td><td></td><td></td><td></td><td></td></tr><tr><td>operating cycle - accounts payable period</td><td class="n nw">50.25</td><td class="nw">days</td><td>There is a 50 day delay since the day we pay for the merchandise to the time we collect the sale. P Corp again is slow here since the average on the marke is --33.58 and 44.58 which means that the inventory is sold before you have to pay for it</td><td>Average between -33.58 and -44.58</td><td>No link. I calculated myself summing F53 and F59 to get the average</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Total Asset turnover</td><td></td><td></td><td>Definition: Efficiency of a company using their assets to produce sales</td><td></td><td></td><td></td><td></td></tr><tr><td>Sales/total assets</td><td class="n nw">0.65</td><td class="nw">dollar</td><td>The company makes 0.65 for every dollar of assets</td><td>Average 151,711</td><td>Ready Ratios</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Capital intensity</td><td></td><td></td><td>Definition: How much money a company needs to generate money in sells</td><td></td><td></td><td></td><td></td></tr><tr><td>Total assets/sales</td><td class="n nw">1.54</td><td class="nw">times</td><td>The company needs $1.54 to make a $1 in sells. This ratio is better than the industry because it means that P Corp needs half the money to make one dollar on sales</td><td>Average is 3.3</td><td class="nw">BLS</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td>IV. Profitability ratios</td><td></td><td></td><td>Definition: How efficiently the firm uses it assets and how efficiently the firm manages the operations</td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Profit margin</td><td></td><td></td><td>Definition: Measures how much profit a company makes of the revenue</td><td></td><td></td><td></td><td></td></tr><tr><td>Net income/sales</td><td class="n nw">0.2</td><td class="nw">times</td><td>The company keeps $0.20 of everything that they make as a revenue. Or 20% of what they make. This ratio is good compared to the industry since it is very similar to their competitors</td><td>Average is 20.4% or 0.204</td><td>Full Ratio</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Return on assets (ROA)</td><td></td><td></td><td>Definition: A mesure of how efficiently a company uses it assets to generate profit</td><td></td><td></td><td></td><td></td></tr><tr><td>Net income/total assets</td><td class="n nw">0.13</td><td class="nw">times</td><td>The company generates 13.06% return on total assets. The average chemical company makes 160% of return which makes P Corp once again fall behind their competitors</td><td>Average is 1.6</td><td>Full Ratio</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Return on equity (ROE)</td><td></td><td></td><td>Definition: A measure of how effectively a company uses shareholder equity to generate profit</td><td></td><td></td><td></td><td></td></tr><tr><td>Net income/total equity</td><td class="n nw">0.18</td><td class="nw">times</td><td>The shareholders make 18.06% of what they invest while the average makes 6.37%, it is a profitable company for investors</td><td>Average 6.37%</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b nw">ROE</td><td></td><td></td><td>Definition: A measure of how effectively a company uses shareholder equity to generate profit</td><td></td><td></td><td></td><td></td></tr><tr><td>(Net income/sales)*(Sales/Assets)*(Assets/Equity)</td><td class="n nw">0.18</td><td class="nw">times</td><td>The shareholders make 18.06% of what they invest</td><td>Average 6.37%</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td>V. Market value ratio</td><td></td><td></td><td>Definition: financial metrics that takes companies stock price that compares to other businesses in the industry</td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Price per share</td><td class="n nw">115</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="b">Shares outstanding</td><td class="n nw">33</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="b">Sales per share</td><td class="n nw">71.55</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="b">Book value per share</td><td class="n nw">79.55</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Enterprise value</td><td></td><td></td><td>Definition: the total market the value of the stock plus the total debt minus cash</td><td></td><td></td><td></td><td></td></tr><tr><td>Market Cap + Total Debt - Cash</td><td class="n nw">4,702</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="b nw">EBITDA</td><td></td><td></td><td class="b">Definition: are the earning before taxes, interest, taxes, depreciation, and amortization</td><td class="b"></td><td></td><td></td><td></td></tr><tr><td>Net Income + Interest + Taxes + Depreciation + Amortization</td><td class="n nw">1,017</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Earnings per share</td><td></td><td></td><td>Definition: company&#x27;s profit per every share of common stock</td><td></td><td></td><td></td><td></td></tr><tr><td>Net Income/Shares outstanding</td><td class="n nw">14.36</td><td class="nw">times</td><td>For each otustanding share the company made 14 dollars while the average for the industry is 55.69. P Corp is making less out of their shares than their competitors</td><td>Average 55.69</td><td class="nw">IDX</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Price-earnings ratio</td><td></td><td></td><td class="b">Definition: how much investors are willing to pay for each dollar a company makes by comparing the price they are paying against the earning they are getting for the price they have paid</td><td class="b"></td><td class="b"></td><td></td><td></td></tr><tr><td>Price per share/earning per share</td><td class="n nw">8.01</td><td class="nw">times</td><td>For every dollar of earnings the company generates, shareholders are investing  8 dollars. This is a good ratio for P Corp because means that investors have to pay less to make one dollar of profit compared to the rest of the industry</td><td>Average is 15.75</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Price-sales ratio</td><td></td><td></td><td>Definition: is a formula used to measure the total value that investors place on the company in comparison to the total revenue generated by the business. It helps investors know how much they are truly paying for the company</td><td></td><td></td><td></td><td></td></tr><tr><td>Price per share/sales per share</td><td class="n nw">1.61</td><td class="nw">times</td><td>For every dollar of sales the company makes, investors are willing to pay 1.60 for their stock. The company is overvalue because you can invest in the average company for 0.7 instead of 1.6</td><td>Average is 0.70</td><td class="nw">NYU</td><td class="nw">Bad</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">Market-to-book ratio</td><td></td><td></td><td class="b">Definition: we are comparing how the market is valuating the stock price against the orginal value that the books say it&#x27;s worth. If &gt; 1 successful creating value. If &lt; 1 not successful. Page 65 book</td><td class="b"></td><td class="b"></td><td></td><td></td></tr><tr><td>Market value per share/book value per share</td><td class="n nw">1.45</td><td class="nw">times</td><td>The company&#x27;s stock price is worth 1.44 times the book value. While is below the average is still a solid ratio</td><td>Average 1.61</td><td class="nw">NYU</td><td class="nw">Good</td><td></td></tr><tr class="xl-gap"><td colspan="8"></td></tr><tr><td class="b">EBITDA Ratio</td><td></td><td></td><td class="nw">Definition:</td><td></td><td></td><td></td><td></td></tr><tr><td>Enterprise value/EBITDA</td><td class="n nw">4.62</td><td class="nw">times</td><td>The total value of the company is 4.62 times greater than the operating cash flow generated by the company. Cash flow because we are taking into consideration non-cash items such as amortization, depreciation, interest, and taxes. This is a bad ratio for P Corp because the average in the industry has 7.97 ratio, therefor P Corp is behind the rest of the companies in the industry</td><td>Average 7.97</td><td class="nw">NYU</td><td class="nw">Bad</td><td></td></tr></table></div></div></template>
+
+<div class="pv" id="pv" role="dialog" aria-modal="true" aria-label="Document preview">
+  <div class="pv-panel" id="pvPanel">
+    <div class="pv-bar">
+      <div class="pv-title" id="pvTitle">Document<small id="pvKind"></small></div>
+      <a class="pv-act" id="pvDl" href="#" download>↓ Download original</a>
+      <button class="pv-x" id="pvX" aria-label="Close preview">×</button>
+    </div>
+    <div class="pv-body">
+      <iframe id="pvFrame" title="Document preview" src=""></iframe>
+      <div class="pv-sheet" id="pvSheet"></div>
+      <div class="pv-fallback" id="pvFallback">
+        <div>
+          <p>Your browser can't display this preview inline.</p>
+          <p><a class="pv-act" id="pvFallbackDl" href="#" target="_blank" rel="noopener">Open the file instead →</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* Nav shadow */
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 12); };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* Mobile menu */
+  var burger = document.getElementById('burger'), links = document.getElementById('navlinks');
+  burger.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+    burger.textContent = open ? '✕' : '☰';
+  });
+  links.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ links.classList.remove('open'); burger.textContent='☰'; burger.setAttribute('aria-expanded','false'); }
+  });
+
+  /* Scroll reveal */
+  var els = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en, i){
+        if(en.isIntersecting){
+          setTimeout(function(){ en.target.classList.add('in'); }, Math.min(i*70, 260));
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('in'); }); }
+
+  /* Count-up stats */
+  var nums = document.querySelectorAll('.stat .n[data-count]');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window && !reduce){
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting) return;
+        var el = en.target, target = parseFloat(el.dataset.count);
+        var dec = parseInt(el.dataset.dec || '0', 10);
+        var pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+        var t0 = null, dur = 1100;
+        function step(ts){
+          if(!t0) t0 = ts;
+          var p = Math.min((ts - t0)/dur, 1);
+          var e = 1 - Math.pow(1 - p, 3);
+          el.textContent = pre + (target * e).toFixed(dec) + suf;
+          if(p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        io2.unobserve(el);
+      });
+    }, {threshold:.6});
+    nums.forEach(function(n){ io2.observe(n); });
+  }
+
+  /* Lightbox (images) */
+  var lb = document.getElementById('lb'), lbimg = document.getElementById('lbimg');
+  function lbOpen(src, alt){ lbimg.src = src; lbimg.alt = alt || ''; lb.classList.add('on'); document.body.style.overflow='hidden'; }
+  function lbClose(){ lb.classList.remove('on'); lbimg.src=''; if(!pv.classList.contains('on')) document.body.style.overflow=''; }
+  document.querySelectorAll('img[data-zoom]').forEach(function(im){
+    im.style.cursor = 'zoom-in';
+    im.addEventListener('click', function(e){ e.stopPropagation(); lbOpen(im.src, im.alt); });
+  });
+  lb.addEventListener('click', lbClose);
+  document.getElementById('lbx').addEventListener('click', lbClose);
+
+  /* Document preview modal */
+  var pv    = document.getElementById('pv'),
+      pvF   = document.getElementById('pvFrame'),
+      pvS   = document.getElementById('pvSheet'),
+      pvT   = document.getElementById('pvTitle'),
+      pvK   = document.getElementById('pvKind'),
+      pvDl  = document.getElementById('pvDl'),
+      pvFb  = document.getElementById('pvFallback'),
+      pvFbD = document.getElementById('pvFallbackDl');
+
+  function bindTabs(){
+    var tabs  = pvS.querySelectorAll('.xl-tab'),
+        panes = pvS.querySelectorAll('.xl-pane');
+    tabs.forEach(function(t){
+      t.addEventListener('click', function(){
+        tabs.forEach(function(x){ x.classList.remove('on'); });
+        panes.forEach(function(p){ p.classList.remove('on'); });
+        t.classList.add('on');
+        var pane = pvS.querySelector('.xl-pane[data-i="'+t.dataset.i+'"]');
+        if(pane) pane.classList.add('on');
+        pvS.scrollTop = 0;
+      });
+    });
+  }
+
+  function pvOpen(src, dl, label, kind){
+    pvT.textContent = label || 'Document';
+    pvT.appendChild(pvK);
+    pvK.textContent = kind || '';
+    pvDl.setAttribute('href', dl || src);
+    pvFbD.setAttribute('href', dl || src);
+    pvFb.classList.remove('on');
+
+    if(src.indexOf('template:') === 0){
+      pvF.setAttribute('src','');
+      pvF.style.display = 'none';
+      pvS.classList.add('on');
+      var tpl = document.getElementById(src.slice(9));
+      pvS.innerHTML = tpl ? tpl.innerHTML : '';
+      bindTabs();
+      pvS.scrollTop = 0;
+    } else {
+      pvS.classList.remove('on');
+      pvS.innerHTML = '';
+      pvF.style.display = '';
+      pvF.setAttribute('src', src + '#view=FitH');
+      // iOS Safari and some mobile browsers refuse to render PDFs in an iframe
+      if(/iPad|iPhone|iPod|Android/i.test(navigator.userAgent)) pvFb.classList.add('on');
+    }
+    pv.classList.add('on');
+    document.body.style.overflow = 'hidden';
+  }
+  function pvClose(){
+    pv.classList.remove('on');
+    pvF.setAttribute('src','');
+    pvS.classList.remove('on');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('pvX').addEventListener('click', pvClose);
+  pv.addEventListener('click', function(e){ if(e.target === pv) pvClose(); });
+
+  /* explicit per-file links inside a card */
+  document.querySelectorAll('a[data-open]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault(); e.stopPropagation();
+      pvOpen(a.dataset.open, a.dataset.dl, a.dataset.label, a.dataset.kind);
+    });
+  });
+
+  /* whole-card click opens the primary preview */
+  document.querySelectorAll('.proj.clickable[data-preview]').forEach(function(card){
+    card.addEventListener('click', function(e){
+      // let real links (download, GitHub, dataset) behave normally
+      if(e.target.closest('a')) return;
+      pvOpen(card.dataset.preview, card.dataset.dl, card.dataset.label, card.dataset.kind);
+    });
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key !== 'Escape') return;
+    if(pv.classList.contains('on')) pvClose();
+    else lbClose();
+  });
+})();
+</script>
+</body>
+</html>
